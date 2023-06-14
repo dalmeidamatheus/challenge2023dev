@@ -289,6 +289,7 @@ input[type=number] {
     }
     .texto-desafio{
         flex: 0;
+        align-items: center;
     }
     #secao-proposta{
         flex-direction: column;
@@ -297,6 +298,11 @@ input[type=number] {
     }
     #texto-proposta{
         margin-top: 6rem;
+        align-items: center;
+    }
+    .txtprpst{
+        padding-right: 3rem;
+        padding-left: 3rem;
     }
     #secao-ferramentas ul {
         flex-direction: column;
@@ -321,6 +327,7 @@ input[type=number] {
     min-height: 600px;
     min-width: 500px;
   }
+
 .navbar{
     min-width: 700px;
 }
