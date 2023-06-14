@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-toggler[aria-expanded="true"]~.navbar-collapse .nav-link {
+    background-color: #f8f9fa;
+}
+
+.navbar-toggler[aria-expanded="true"]~.navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* .navbar {
+    height: 6rem;
+} */
+
+.navbar-nav {
+    margin: 0 auto;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.navbar-nav .nav-item {
+    display: inline-block;
+}
+
+.navbar-nav .nav-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 180%;
+}
+
+.navbar-toggler {
+    border-width: 0;
+}
+
+:root {
+    font-size: 62.5%;
+    /*10px/16px */
+    --font-default: 'Montserrat';
+    --font-heading: 'Poppins';
+    --color-default: #FFF;
+    --color-secundary: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-default);
+}
+
+#secao-desafio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    height: 100vh;
+    color: var(--color-default);
+    padding: 35rem 0rem;
+    top: 10px;
+}
+
+.texto-desafio {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rem;
+    color: #000;
+}
+
+.img-desafio {
+    border-radius: 40px 0 0 40px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 900;
+}
+
+h1 {
+    font-size: clamp(3rem, 5vw, 6rem);
+    margin-bottom: 1rem;
+    /* width: 45rem; */
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+span {
+    font-size: clamp(2rem, 3vw, 4rem);
+    margin-bottom: 8rem;
+}
+
+section {
+    display: flex;
+    padding: 2rem;
+}
+
+#secao-proposta {
+    height: 70rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    gap: 2rem;
+}
+
+.avatar {
+    border-radius: 0 50px 50px 0;
+    width: 70rem;
+    height: 50rem;
+    position: relative;
+    top: 5rem;
+    left: -100%;
+    animation: slide-in 8s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+#texto-proposta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+#secao-ferramentas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #486eebd5;
+    height: 70rem;
+}
+
+#secao-ferramentas ul {
+    display: flex;
+    gap: 6rem;
+    margin-top: 10rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#secao-ferramentas li {
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+}
+
+#secao-ferramentas h2 {
+    position: relative;
+    font-size: 7rem;
+    top: 5rem;
+    color: #FFF;
+}
+
+#secao-ferramentas h3 {
+    font-size: 1.7rem;
+}
+
+.carde {
+    position: relative;
+    cursor: pointer;
+    background-color: none;
+}
+
+.carde {
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.carde-image img {
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.carde-info {
+    position: absolute;
+    padding: 2rem;
+    gap: 1rem;
+    color: #FFF;
+    top: 50%;
+}
+
+.carde-info1 {
+    position: absolute;
+    padding: 2rem;
+    gap: 1rem;
+    color: #FFF;
+    top: -35%;
+}
+
+.carde-content {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.carde-front,
+.carde-back {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    backface-visibility: hidden;
+}
+
+.carde-front {
+    transform: rotateY(0deg);
+}
+
+.carde-back {
+    transform: rotateY(180deg);
+}
+
+.carde:hover .carde-content {
+    transform: rotateY(180deg);
+}
+
+
+#secao-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #486eebd5;
+}
+
+#secao-formulario form {
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: #FFF;
+    position: relative;
+    top: -3rem;
+}
+
+
+#secao-formulario h3 {
+    position: relative;
+    color: #0d6efd;
+    font-size: 3rem;
+}
+
+input[type=number] {
+    padding: .5rem;
+    background-color: rgb(2, 117, 202);
+    color: var(--color-default);
+    border: none;
+}
+
+@media (max-width: 900px) {
+    #secao-desafio{
+        flex-direction: column;
+        min-width: 650px;
+        align-items: center;
+        flex: 0;
+        padding: 0;
+        margin-left: 0;
+    }
+    .img-desafio{
+        border-radius: 0;
+    }
+    .texto-desafio{
+        flex: 0;
+    }
+    #secao-proposta{
+        flex-direction: column;
+        height: fit-content;
+        min-width: 650px;
+    }
+    #texto-proposta{
+        margin-top: 6rem;
+    }
+    #secao-ferramentas ul {
+        flex-direction: column;
+    }
+    #secao-ferramentas{
+        height: fit-content;
+        min-width: 650px;
+    }
+    #secao-formulario form {
+        grid-template-columns: 1fr;
+        min-width: 650px;
+    }
+}
+#texto-proposta,
+#texto-desafio,
+.img-desafio{
+    min-height: 600px;
+    min-width: 500px;
+  }
+.navbar{
+    min-width: 700px;
+}
+
+#secao-formulario label {
+    position: absolute;
+    color: #000;
+    font-size: 1rem;
+}
+
+#secao-formulario .form-fields .row {
+    display: flex;
+    margin-bottom: 2rem;
+}
