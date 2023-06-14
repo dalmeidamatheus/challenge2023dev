@@ -303,16 +303,18 @@ input[type=number] {
     }
     #secao-ferramentas{
         height: fit-content;
-        min-width: 700px;
+        min-width: 720px;
     }
     #secao-formulario form {
         grid-template-columns: 1fr;
         min-width: 650px;
     }
-    #secao-formulario {
-        min-width: 700px;
-    }
 }
+
+#secao-formulario {
+    min-width: 720px;
+}
+
 #texto-proposta,
 #texto-desafio,
 .img-desafio{
